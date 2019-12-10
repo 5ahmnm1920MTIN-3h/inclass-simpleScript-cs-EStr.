@@ -3,12 +3,12 @@ using UnityEngine.UI;
 
 public class ComputeNumbers : MonoBehaviour
 {
-    public InputField ipVarA;
-    public InputField ipVarB;
+    public InputField ipMinuend;
+    public InputField ipSubtrahend;
     public Text result;
 
-    float varA;
-    float varB;
+    float a;
+    float b;
 
     // Start is called before the first frame update
     void Start()
@@ -18,17 +18,14 @@ public class ComputeNumbers : MonoBehaviour
 
     public void SetResult()
     {
-        float a = float.Parse(ipVarA.text);
-        float b = float.Parse(ipVarB.text);
-        Debug.Log("in Result" + (a + b));
-
-        //result.text = SubtractNumbers(float.Parse(ipVarA.text), float.Parse(ipVarB.text));
+        float a = float.Parse(ipMinuend.text);
+        float b = float.Parse(ipSubtrahend.text);
+        Debug.Log("in Result" + (a - b));
     }
 
-    public float SubtractNumbers(float variableA, float variableB)
+    public float SubtractNumbers(float minuend, float subtrahend)
     {
-        float result = variableA - variableB;
-     // Debug.Log("Test" + result.ToString());
+        float result = minuend - subtrahend;
         return result;
     }
 }
