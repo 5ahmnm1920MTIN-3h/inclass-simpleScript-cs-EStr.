@@ -5,22 +5,24 @@ public class ComputeNumbers : MonoBehaviour
 {
     public InputField ipMinuend;
     public InputField ipSubtrahend;
-    public Text result;
+    public Text resulT;
 
-    float a;
-    float b;
+    float varMinuend;
+    float varSubtrahend;
 
     // Start is called before the first frame update
     void Start()
     {
         SetResult();
+        varMinuend = 0;
+        varSubtrahend = 0;
     }
 
     public void SetResult()
     {
-        float a = float.Parse(ipMinuend.text);
-        float b = float.Parse(ipSubtrahend.text);
-        Debug.Log("in Result" + (a - b));
+        varMinuend = float.Parse(ipMinuend.text);
+        varSubtrahend = float.Parse(ipSubtrahend.text);
+        Debug.Log("in Result" + (varMinuend - varSubtrahend));
     }
 
     public float SubtractNumbers(float minuend, float subtrahend)
